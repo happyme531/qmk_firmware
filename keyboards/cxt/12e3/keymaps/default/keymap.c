@@ -30,7 +30,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
-
 bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         if (clockwise) {
@@ -39,14 +38,14 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
             rgb_matrix_step_reverse();
         }
         return false;
-    }else if (index == 1) {
+    } else if (index == 1) {
         if (clockwise) {
             tap_code(KC__VOLUP);
         } else {
             tap_code(KC__VOLDOWN);
         }
         return false;
-    }else if (index == 2) {
+    } else if (index == 2) {
         if (clockwise) {
             tap_code(KC_RIGHT);
         } else {

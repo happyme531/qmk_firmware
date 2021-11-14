@@ -19,8 +19,7 @@
 #include "rgb_matrix_types.h"
 
 
-led_config_t g_led_config = {
-    {
+led_config_t g_led_config = {{
         {3,2,1,0},
         {4,5,6,7},
         {11,10,9,8},
@@ -32,6 +31,4 @@ led_config_t g_led_config = {
     }
 };
 
-bool encoder_update_kb(uint8_t index, bool clockwise) {
-    return encoder_update_user(index, clockwise);
-}
+bool encoder_update_kb(uint8_t index, bool clockwise) { return encoder_update_user(index, clockwise); }
